@@ -1,0 +1,73 @@
+/* referrance: https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
+/* referrance: https://codepen.io/colorlib/pen/KVoZyv */
+
+.topnav a:nth-child(2), .topnav a:nth-child(3), .topnav a:nth-child(1), .topnav a:nth-child(4) {display: none;}
+
+/* style form */
+#contact {
+    background: #F9F9F9;
+    padding: 25px 50px;
+}
+#contact h3 {
+    display: block;
+    font-size: 30px;
+    font-weight: bold;
+    margin-bottom: 50px;
+    text-align: center;
+}
+.left-col {display: none;}
+.right-col, .button{
+    margin: 0 0 10px;
+    width: 100%;
+    padding: 0;
+}
+.right-col input, textarea {
+    width: 100%;
+    border: 1px solid #ccc;
+    background: #FFF;
+    margin: 0 0 5px;
+    padding: 10px;
+}
+textarea {
+    height: 100px;
+    max-width: 100%;
+    resize: none;
+}
+button {
+    cursor: pointer;
+    width: 100%;
+    padding: 10px;
+    font-size: 15px;
+}
+
+@media screen and (min-width:800px){
+    
+    #self-introduction {
+        display: grid;
+        grid-template-columns: 3fr 2fr;
+        padding: 50px;
+        margin: auto;
+    }
+
+    /* form */
+    .rows {
+        display: grid;
+        grid-template-columns: 1fr 9fr;
+        grid-template-rows: 30px 30px 100px 30px;
+        grid-gap: 20px;
+    }
+    .left-col {
+        display: block;
+        grid-column: 1 / span 1;
+    }
+    .right-col {grid-column: 2 / span 1;}
+    .name{grid-row: 1 / span 1;}
+    .email {grid-row: 2 / span 1;}
+    .content {grid-row: 3 / span 1;}
+    .button {
+        grid-row: 4 / span 1;
+        grid-column: 1 / span 2;
+        text-align: right;
+    }
+    textarea {height: 80px;}
+}

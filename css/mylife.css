@@ -1,0 +1,177 @@
+/* referring source: https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
+/* referring source: https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_flip_card */
+p, div {
+    line-height: 1.5;
+    font-size: 18px;
+}
+h1 {font-size: 30px;}
+h2 {font-size: 25px;}
+
+.topnav a:nth-child(2), .topnav a:nth-child(3), .topnav a:nth-child(1), .topnav a:nth-child(5) {display: none;}
+
+.bigtitle {
+    background-attachment: fixed; /* Parallax effect */     
+    background-position: bottom;  /* Parallax effect */
+    background-repeat: no-repeat; /* Parallax effect */
+    background-size: cover;       /* Parallax effect */
+    color: white;
+    background-color: #575757;
+    height: 400px;                /* Parallax effect */
+  
+    background-image: url("../images/night.jpg");
+
+    font-size: 40px;
+    font-style: italic;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    height: 400px;
+    padding-left: 15px;
+}
+
+#main {
+    padding: 30px 0;
+    margin-bottom: 15px;
+    animation-name: wtb;
+    animation-duration: 1.2s;
+}
+
+.activities {
+      display: flex;
+      flex-wrap: wrap;
+      flex-direction: column;
+      justify-content: space-between;
+      align-items: stretch;
+}
+
+.description {
+    padding: 30px;
+    margin: auto;
+    transition: 0.5s;
+}
+
+.description:hover {
+    background-color: rgba(238, 232, 232, 0.8);
+    border-radius: 8px;
+    transition: 0.3s ease-in-out;
+}
+
+.gallery {
+    display: block;
+    margin-bottom: 150px;
+}
+
+img {width: 300px; 
+    height: 300px;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px;
+}
+
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2);
+}
+  
+.flip-card:hover .flip-card-inner, .flip-card:focus .flip-card-inner {transform: rotateY(180deg);}
+.flip-card-front, .flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+}
+.flip-card-front {
+    background-color: #bbb;
+    color: black;
+}
+  
+.flip-card-back {
+    background-color: #1C5982;
+    color: white;
+    transform: rotateY(180deg);
+    text-align: center;
+}
+
+@media screen and (min-width:500px) {
+    .gallery {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: repeat(10, 150px);
+        grid-gap: 5px;
+    }
+    .flip-card {justify-self: center;}
+    #card2 {grid-row: 2 / span 1;
+            grid-column: 2 / span 1;}
+    #card3 {grid-row: 3 / span 1;}
+    #card4 {grid-row: 4 / span 1;
+            grid-column: 2 / span 1;}
+    #card5 {grid-row: 5 / span 1;}
+    #card6 {grid-row: 6 / span 1;
+            grid-column: 2 / span 1;}
+    #card7 {grid-row: 7 / span 1;}
+    #card8 {grid-row: 8 / span 1;
+            grid-column: 2 / span 1;}
+    #card9 {grid-row: 9 / span 1;}
+    
+}
+
+@media screen and (min-width: 800px) {
+    #main {padding: 30px;}
+}
+
+
+@media screen and (min-width: 920px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr;
+        grid-template-rows: repeat(6, 150px);
+        grid-gap: 10px;
+        padding-bottom: 180px;
+    }
+    #card2 {grid-row: 2 / span 1;
+            grid-column: 2 / span 1;}
+    #card3 {grid-row: 1 / span 1;
+            grid-column: 3 / span 1;}
+    #card4 {grid-row: 3 / span 1;
+            grid-column: 1 / span 1;}
+    #card5 {grid-row: 3 / span 1;
+            grid-column: 3 / span 1;}
+    #card6 {grid-row: 4 / span 1;
+            grid-column: 2 / span 1;}
+    #card7 {grid-row: 5 / span 1;
+            grid-column: 1 / span 1;}
+    #card8 {grid-row: 5 / span 1;
+            grid-column: 3 / span 1;}
+    #card9 {grid-row: 6 / span 1;
+            grid-column: 2 / span 1;}
+
+}
+
+@media screen and (min-width: 1350px) {
+    .gallery {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        grid-template-rows: repeat(3, 300px);
+        grid-gap: 10px;
+        padding: 30px;
+    }
+    #card2, #card3, #card4 {grid-row: 1 / span 1;
+            grid-column: 2 / span 1;}
+    #card3 {grid-column: 3 / span 1;}
+    #card4 {grid-column: 4 / span 1;}
+    #card5, #card6, #card7, #card8 {grid-row: 2 / span 1;
+            grid-column: 1 / span 1;}
+    #card6 {grid-column: 2 / span 1;}
+    #card7 {grid-column: 3 / span 1;}
+    #card8 {grid-column: 4 / span 1;}
+    #card9 {grid-row: 3 / span 1;
+            grid-column: 2 / span 2;}
+
+}

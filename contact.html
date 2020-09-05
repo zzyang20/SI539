@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact</title>
+    <link rel="stylesheet" href="css/contact.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-160012737-1"></script>
+    <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+
+    gtag('config', 'UA-160012737-1');
+    </script>
+
+    <script src="js/icon.js"></script>
+
+</head>
+<body>
+    <a class="skip" href="#main"> Skip to main content</a>
+    <header id='header' class="header">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+        <!-- Top Navigation Menu -->
+        <div class="topnav" id="myTopnav">
+            <a href="index.html">About</a>
+            <a href="projects.html">Projects</a>
+            <a href="resume.html">Resume</a>
+            <a href="mylife.html">My life</a>
+            <a href="contact.html" class="active">Contact</a>
+
+            <a href="javascript:void(0);" class="icon" onclick="myFunction()" aria-label="link">
+                <i class="fa fa-bars"></i>
+            </a>
+        </div>
+    </header>
+    
+    <main id="main">
+        <form action="https://formspree.io/xlenygva" method="POST" id="contact">
+            <h3>Email Me!</h3>
+
+            <div class="rows">
+
+                <div class="left-col name">
+                    <label for="name">Name: </label>
+                </div>
+                <div class="right-col name">
+                    <input type="text" id="name" name="name" placeholder="Your Name" required>
+                </div>
+            
+                <div class="left-col email">
+                    <label for="email">Email: </label>
+                </div>
+                <div class="right-col email">
+                    <input type="email" id="email" name="_replyto" placeholder="Your Email Address" required>
+                </div>
+            
+
+                <div class="left-col content">
+                    <label for="content">Message: </label>
+                </div>
+                <div class="right-col content">
+                    <textarea type="text" id="content" name="emailContent" placeholder="Your Message" required></textarea>
+                </div>
+
+            
+                <div class="button">
+                    <button type="submit" value="Send">Submit</button>
+                </div>
+                
+            </div> 
+          </form>
+
+    </main>
+
+
+</body>
+</html>

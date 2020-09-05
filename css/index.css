@@ -1,0 +1,63 @@
+/* referring source: https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
+
+html {
+    background-color: black;
+}
+
+.topnav a:nth-child(2), .topnav a:nth-child(3), .topnav a:nth-child(5), .topnav a:nth-child(4) {display: none;}
+
+p {
+    line-height: 1.5;
+    font-size: 150%;
+    background-color: rgba(68, 68, 68, 0.151);
+    margin: 2px;
+    padding: 10px;
+    font-family: monospace;
+    color: white;
+    max-width: 500px;
+}
+
+img {
+    width: 400px;
+}
+
+@media screen and (min-width:800px){
+    html{
+        background-image: url('../images/profile.png');
+        background-attachment: fixed; /* Parallax effect */     
+        background-position: center;  /* Parallax effect */
+        background-repeat: no-repeat; /* Parallax effect */
+        background-size: cover;       /* Parallax effect */
+        color: white;
+        background-color: #575757;
+    }
+
+    #self-introduction {
+        display: -ms-grid;
+        display: grid;
+        -ms-grid-columns: 3fr 2fr;
+        grid-template-columns: 3fr 2fr;
+        padding: 50px;
+        margin: auto;
+    }
+    
+    img{
+        display: none;
+    }
+
+    .photo {
+        -ms-grid-column: 1 / span 1;
+        grid-column: 1 / span 1;
+    }
+    
+    div p {
+        -ms-grid-column: 2 / span 1;
+        grid-column: 2 / span 1;
+        line-height: 2;
+        font-size: 180%;
+        animation-name: btw;
+        animation-duration: 2.5s;
+        margin-top: 100px;
+    }
+
+}

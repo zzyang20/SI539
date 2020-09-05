@@ -1,0 +1,93 @@
+/* referring source: https://www.w3schools.com/howto/howto_js_topnav_responsive.asp */
+
+.topnav a:nth-child(1), .topnav a:nth-child(3), .topnav a:nth-child(5), .topnav a:nth-child(4) {display: none;}
+
+.myProjects{
+    font-size: 30px;
+    margin: 10px;
+    padding-bottom: 10px;
+    border-bottom: dotted 2px black;
+}
+
+main li, h2 {
+    font-size: 20px;
+    line-height: 1.5;
+}
+
+.container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.level1 {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.level0 {
+    animation-name: wtb;
+    animation-duration: 2.5s;
+    transition: 0.5s;
+}
+
+.level0:hover {
+    background-color: rgba(211, 214, 216, 0.829);
+    transition: 0.3s ease-in-out;
+}
+
+img {
+    width: 150px;
+    border-radius: 5px;
+}
+.title, .project1-img, .project2-img, .project3-img {
+    padding: 5px;
+}
+
+.project1-content, .project2-content, .project3-content {
+    border: solid 2px lightslategrey;
+    border-radius: 5px;
+    list-style-type: none;
+    padding: 10px;
+    margin:0 20px 20px 20px;
+    line-height: 1.5;
+    text-indent: 20px;
+}
+
+
+@media screen and (min-width:800px) {
+    img {
+        width: 150px;
+    }
+
+    .container {padding-top: 3%;}
+
+    .level0 {
+        display: grid;
+        grid-template-columns: 2fr 3fr;
+    }
+    
+    .level1 {
+        grid-column: 1 / span 1;
+        padding-left: 10px;
+    }
+
+    .project1-content, .project2-content, .project3-content {
+        list-style-type: none;
+        border: none;
+        /* grid-row: 2 / span 1; */
+        grid-column: 2/ span 1;
+        align-self: center;
+    }
+
+    .project1 > .title {
+        grid-row: 1 / span 1;
+        grid-column: 2/span 1;
+    }
+
+}
